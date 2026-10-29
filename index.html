@@ -105,6 +105,11 @@ html{scroll-behavior:smooth}
 <div id="checkout-btn-wrap" style="display: contents" hidden>
 <button type="button" class="btn" id="go-checkout" style="min-height: 56px; padding: 0 24px; border: 0; background: #120A0E; color: #F7EFE2; font: inherit; font-weight: 700; font-size: 18px; cursor: pointer">前往結帳 Checkout</button>
 </div>
+
+<div id="tappay-notice" style="display: flex; align-items: center; gap: 12px; font-size: 14px; line-height: 20px" hidden>
+<img src="./assets/TapPay_logo.png" alt="TapPay" width="48" height="48" style="flex: none; display: block; margin: -8px">
+<p style="margin: 0; min-width: 0">本公司採用喬睿科技 TapPay 金流交易系統,消費者刷卡時直接在銀行端系統中交易,本公司不會留下您的信用卡資料,以保障您的權益,資料傳輸過程採用嚴密的 SSL 2048bit 加密技術保護。</p>
+</div>
 </div>
 
 <!-- Delivery form / waiting / done -->
@@ -386,6 +391,7 @@ function render() {
   show('cart-empty', !hasItems && state.step !== 'done');
   show('cart-has-items', hasItems);
   show('checkout-btn-wrap', hasItems && state.step === 'cart');
+  show('tappay-notice', hasItems);
   show('form-hint', state.step === 'cart');
   show('form-wrap', hasItems && state.step === 'form');
   show('done', state.step === 'done');
