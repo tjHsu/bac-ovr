@@ -1,0 +1,426 @@
+<!doctype html>
+<meta charset="utf-8"><style data-dc-design-system-vars>@layer{:root{--cream:#f7efe2;--black:#120a0e;--acid-green:#c5ff55;--lavender:#dcb8ff;--blue:#3a39ff;--light-blue:#afe6ed;--yellow:#f3bb06;--orange:#ff5b23;--surface:#f7efe2;--text:#120a0e;--link:#3a39ff;--focus-ring:#120a0e;--on-acid-green:#120a0e;--on-lavender:#120a0e;--on-blue:#f7efe2;--on-light-blue:#120a0e;--on-yellow:#120a0e;--on-orange:#120a0e;--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;--space-7:64px;--slide-margin:120px;--radius-none:0px;--radius-oval:50%;--font-sans:"ABC Areal", Arial, "Helvetica Neue", Helvetica, "Chiron GoRound TC", sans-serif;--font-tc:"Chiron GoRound TC", "ABC Areal", Arial, sans-serif;--text-display:700 72px/78px var(--font-sans);--text-heading:700 44px/48px var(--font-sans);--text-title:700 48px/52px var(--font-sans);--text-subhead:700 24px/26px var(--font-sans);--text-body:400 16px/22px var(--font-sans);--text-caption:700 12px/14px var(--font-sans);--text-slide-chapter:700 150px/163px var(--font-sans);--text-slide-title:700 100px/109px var(--font-sans);--text-slide-heading:700 90px/98px var(--font-sans);--text-slide-subhead:700 50px/54px var(--font-sans);--text-slide-label:700 45px/49px var(--font-sans);--text-slide-body:400 30px/33px var(--font-sans);--text-tc-display:500 48px/56px var(--font-tc);--text-tc-heading:500 24px/30px var(--font-tc);--text-tc-body:500 16px/26px var(--font-tc);}}</style>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>潛地工作室 Dachshund Studio — Shop</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0;background:#F7EFE2}
+a{color:#3A39FF}a:hover{color:#120A0E}
+.btn{transition:transform .15s ease}
+.btn:hover{transform:rotate(-2deg)}
+:focus-visible{outline:2px solid #3A39FF;outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F7EFE2; color: #120A0E; font-family: Arial, Helvetica, 'Chiron GoRound TC', sans-serif; font-size: 16px; line-height: 22px; overflow-x: hidden">
+
+<!-- HEADER -->
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(16px, 4vw, 48px); background: #F7EFE2">
+<a href="#top" style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; text-decoration: none; color: #120A0E">
+<span style="font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700; font-size: 24px; line-height: 28px">潛地工作室</span>
+<span style="font-weight: 700; font-size: 18px; line-height: 24px; text-transform: uppercase; letter-spacing: 0.02em">Dachshund Studio</span>
+</a>
+<nav aria-label="主選單 Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<a href="#works" style="padding: 12px 14px; color: #120A0E; font-weight: 700; text-decoration: none">作品 Works</a>
+<a href="#returns" style="padding: 12px 14px; color: #120A0E; font-weight: 700; text-decoration: none">退換貨 Returns</a>
+<a href="#checkout" class="btn" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; background: #120A0E; color: #F7EFE2; font-weight: 700; text-decoration: none">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>
+<span>購物車 Cart</span>
+<span aria-live="polite" style="display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 24px; padding: 0 6px; background: #C5FF55; color: #120A0E; font-size: 14px; border-radius: 999px">{{ cartCount }}</span>
+</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: 72px clamp(16px, 4vw, 48px) 80px; background: #C5FF55">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start">
+<div style="display: flex; flex-direction: column; align-items: flex-start; margin-left: calc(-1 * clamp(16px, 4vw, 48px))">
+<span style="background: #120A0E; color: #F7EFE2; font-weight: 700; font-size: 20px; line-height: 24px; padding: 10px 20px 10px clamp(16px, 4vw, 48px); text-transform: uppercase">Original works</span>
+<span style="background: #F7EFE2; color: #120A0E; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; padding: 10px 20px; margin-left: 48px">原創作品・線上購買</span>
+</div>
+<h1 style="margin: 0; font-weight: 700; font-size: clamp(44px, 6vw, 88px); line-height: 1.04; letter-spacing: -0.01em; max-width: 14ch">Art that wants to live with you.</h1>
+<p style="margin: 0; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 500; font-size: clamp(28px, 3vw, 40px); line-height: 1.2">讓作品住進你家。</p>
+<p style="margin: 0; font-size: 18px; line-height: 26px; max-width: 560px">Five originals by Tsai Cheng-Lin, Berk L and A-Ting. One of each, clear prices, and we deliver.<br>蔡丞琳、Berk L 與阿庭的五件原創作品，每件僅此一件，價格清楚，送到府上。</p>
+<a href="#works" class="btn" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #120A0E; color: #F7EFE2; font-weight: 700; font-size: 18px; text-decoration: none">看作品 See the works</a>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; justify-content: center">
+<div style="position: relative; width: min(100%, 460px); aspect-ratio: 4 / 5">
+<div style="position: absolute; inset: 0; border-radius: 50%; overflow: hidden; background: #DCB8FF">
+<img src="./assets/60041c6c298c6656956125532bc230e9.jpg" alt="阿庭《雙卵獸》局部 Detail of A-Ting, Twin Egg Beasts" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform: scale(1.35)">
+</div>
+<span style="position: absolute; right: -8px; bottom: 32px; width: 72px; height: 72px; border-radius: 50%; background: #FF5B23" aria-hidden="true"></span>
+</div>
+</div>
+</section>
+
+<!-- WORKS -->
+<section id="works" style="padding: 88px 0 96px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<h2 style="margin: 0; display: flex; flex-direction: column; align-items: flex-start; font-weight: 700">
+<span style="background: #DCB8FF; color: #120A0E; font-size: clamp(32px, 4vw, 56px); line-height: 1.09; padding: 12px 28px 12px clamp(16px, 4vw, 48px); text-transform: uppercase">Works for sale</span>
+<span style="background: #120A0E; color: #F7EFE2; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.09; padding: 12px 28px; margin-left: clamp(40px, 6vw, 96px)">出售作品</span>
+</h2>
+</div>
+<div style="width: 100%; max-width: 1344px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 40px 32px">
+<sc-for list="{{ works }}" as="w" hint-placeholder-count="5">
+<article style="display: flex; flex-direction: column; gap: 20px; min-width: 0">
+<div style="background: {{ w.ground }}; padding: 28px; height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center">
+<img src="{{ w.img }}" alt="{{ w.alt }}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-weight: 700; font-size: 14px; line-height: 18px; text-transform: uppercase; letter-spacing: 0.04em">{{ w.artist }}</p>
+<h3 style="margin: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700; font-size: 26px; line-height: 32px">{{ w.titleZh }}</span>
+<span style="font-weight: 700; font-size: 18px; line-height: 24px">{{ w.titleEn }}</span>
+</h3>
+<sc-if value="{{ w.hasMeta }}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; font-size: 15px; line-height: 21px">{{ w.metaZh }}<br>{{ w.metaEn }}</p>
+</sc-if>
+<p style="margin: 0; font-size: 15px; line-height: 21px">{{ w.size }} · 單件作品 Unique</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto">
+<span style="font-weight: 700; font-size: 22px; line-height: 28px">{{ w.priceText }}</span>
+<sc-if value="{{ w.notInCart }}" hint-placeholder-val="{{ true }}">
+<button type="button" class="btn" onClick="{{ w.add }}" style="min-height: 48px; padding: 0 20px; border: 0; background: #120A0E; color: #F7EFE2; font: inherit; font-weight: 700; cursor: pointer">加入購物車 Add to cart</button>
+</sc-if>
+<sc-if value="{{ w.inCart }}" hint-placeholder-val="{{ false }}">
+<button type="button" class="btn" onClick="{{ w.remove }}" aria-label="{{ w.removeLabel }}" style="min-height: 48px; padding: 0 20px; border: 0; background: #C5FF55; color: #120A0E; font: inherit; font-weight: 700; cursor: pointer">已加入・移除 In cart · Remove</button>
+</sc-if>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<!-- CHECKOUT -->
+<section id="checkout" style="padding: 88px 0 96px; background: #AFE6ED; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; display: flex; flex-direction: column; align-items: flex-start; font-weight: 700">
+<span style="background: #F3BB06; color: #120A0E; font-size: clamp(32px, 4vw, 56px); line-height: 1.09; padding: 12px 28px 12px clamp(16px, 4vw, 48px); text-transform: uppercase">Checkout</span>
+<span style="background: #120A0E; color: #F7EFE2; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.09; padding: 12px 28px; margin-left: clamp(40px, 6vw, 96px)">結帳</span>
+</h2>
+
+<div style="width: 100%; max-width: 1344px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+<!-- Order summary -->
+<div style="flex: 1 1 360px; min-width: 0; background: #F7EFE2; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-weight: 700; font-size: 24px; line-height: 28px">訂單內容 Your order</h3>
+
+<sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0">購物車是空的。<br>Your cart is empty.</p>
+<a href="#works" style="font-weight: 700">去看作品 Browse the works</a>
+</div>
+</sc-if>
+
+<sc-if value="{{ cartHasItems }}" hint-placeholder-val="{{ true }}">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px">
+<sc-for list="{{ cartItems }}" as="c" hint-placeholder-count="2">
+<li style="display: flex; gap: 16px; align-items: center">
+<div style="width: 72px; height: 72px; flex: none; background: {{ c.ground }}; display: flex; align-items: center; justify-content: center; padding: 6px; box-sizing: border-box">
+<img src="{{ c.img }}" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700">{{ c.titleZh }}</span>
+<span style="font-size: 14px; line-height: 18px">{{ c.titleEn }} — {{ c.artist }}</span>
+<button type="button" onClick="{{ c.remove }}" aria-label="{{ c.removeLabel }}" style="align-self: flex-start; min-height: 32px; padding: 4px 0; border: 0; background: none; color: #3A39FF; font: inherit; font-size: 14px; font-weight: 700; text-decoration: underline; cursor: pointer">移除 Remove</button>
+</div>
+<span style="font-weight: 700; white-space: nowrap">{{ c.priceText }}</span>
+</li>
+</sc-for>
+</ul>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px; background: linear-gradient(#120A0E, #120A0E) top / 100% 2px no-repeat">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>小計 Subtotal</span><span style="font-weight: 700">{{ subtotalText }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>運費 Shipping</span><span style="text-align: right">聯繫時確認<br>Confirmed when we contact you</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; font-weight: 700; font-size: 22px; line-height: 28px; padding-top: 8px"><span>合計 Total</span><span>{{ subtotalText }}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ showCheckoutBtn }}" hint-placeholder-val="{{ true }}">
+<button type="button" class="btn" onClick="{{ goCheckout }}" style="min-height: 56px; padding: 0 24px; border: 0; background: #120A0E; color: #F7EFE2; font: inherit; font-weight: 700; font-size: 18px; cursor: pointer">前往結帳 Checkout</button>
+</sc-if>
+</div>
+
+<!-- Delivery form / waiting / done -->
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+<sc-if value="{{ showFormHint }}" hint-placeholder-val="{{ false }}">
+<div style="background: #F7EFE2; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 700; font-size: 24px; line-height: 28px">收件資料 Delivery details</h3>
+<p style="margin: 0">選好作品後，按「前往結帳」填寫收件資料。<br>Pick a work, then press Checkout to fill in your delivery details.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" style="background: #F7EFE2; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-weight: 700; font-size: 24px; line-height: 28px">收件資料 Delivery details</h3>
+<p style="margin: 0; font-size: 14px; line-height: 20px">標示 * 為必填。Fields marked * are required.</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-name" style="font-weight: 700; font-size: 14px">收件人姓名 Full name *</label>
+<input id="f-name" name="name" autocomplete="name" value="{{ form.name }}" onChange="{{ on.name }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-phone" style="font-weight: 700; font-size: 14px">手機 Mobile *</label>
+<input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="09xx-xxx-xxx" value="{{ form.phone }}" onChange="{{ on.phone }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-email" style="font-weight: 700; font-size: 14px">Email *</label>
+<input id="f-email" name="email" type="email" autocomplete="email" value="{{ form.email }}" onChange="{{ on.email }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-method" style="font-weight: 700; font-size: 14px">取貨方式 Delivery method *</label>
+<select id="f-method" name="method" value="{{ form.method }}" onChange="{{ on.method }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+<option value="delivery">宅配到府 Home delivery</option>
+<option value="pickup">工作室自取 Studio pickup</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-zip" style="font-weight: 700; font-size: 14px">郵遞區號 Postcode *</label>
+<input id="f-zip" name="zip" autocomplete="postal-code" inputmode="numeric" value="{{ form.zip }}" onChange="{{ on.zip }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-city" style="font-weight: 700; font-size: 14px">縣市／區 City / District *</label>
+<input id="f-city" name="city" autocomplete="address-level2" placeholder="臺北市大安區 Da'an, Taipei" value="{{ form.city }}" onChange="{{ on.city }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-address" style="font-weight: 700; font-size: 14px">地址 Street address *</label>
+<input id="f-address" name="address" autocomplete="street-address" value="{{ form.address }}" onChange="{{ on.address }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-vat" style="font-weight: 700; font-size: 14px">發票統編（選填）Company VAT ID (optional)</label>
+<input id="f-vat" name="vat" inputmode="numeric" maxlength="8" value="{{ form.vat }}" onChange="{{ on.vat }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-time" style="font-weight: 700; font-size: 14px">方便聯繫時段 Best time to call</label>
+<input id="f-time" name="time" placeholder="平日晚上 Weekday evenings" value="{{ form.time }}" onChange="{{ on.time }}" style="min-height: 48px; padding: 0 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit">
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-note" style="font-weight: 700; font-size: 14px">備註 Notes</label>
+<textarea id="f-note" name="note" rows="3" value="{{ form.note }}" onChange="{{ on.note }}" style="padding: 12px; border: 2px solid #120A0E; border-radius: 0; background: #FFFFFF; color: #120A0E; font: inherit; resize: vertical"></textarea>
+</div>
+
+<sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; padding: 12px 16px; background: #120A0E; color: #F7EFE2; font-weight: 700">請填寫所有標示 * 的欄位。Please fill in every field marked *.</p>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<button type="submit" class="btn" style="min-height: 56px; padding: 0 28px; border: 0; background: #3A39FF; color: #F7EFE2; font: inherit; font-weight: 700; font-size: 18px; cursor: pointer">送出，我們將與您聯繫 · Submit — we’ll contact you</button>
+<p style="margin: 0; font-size: 14px; line-height: 20px; max-width: 360px">目前不需線上付款，我們會聯繫您確認運費與付款方式。<br>No online payment yet. We’ll contact you to confirm shipping and payment.</p>
+</div>
+</form>
+</sc-if>
+
+<sc-if value="{{ showDone }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="background: #3A39FF; color: #F7EFE2; padding: 40px 32px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start">
+<p style="margin: 0; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700; font-size: 36px; line-height: 1.15">謝謝！我們將與您聯繫。</p>
+<p style="margin: 0; font-weight: 700; font-size: 28px; line-height: 1.15">Thank you — we’ll contact you.</p>
+<p style="margin: 0; font-size: 17px; line-height: 24px; max-width: 620px">我們已收到您的訂購：{{ orderedZh }}。我們會在 [X] 個工作天內以電話或 Email 聯繫您，確認運費、付款與送達時間。<br>We’ve received your order: {{ orderedEn }}. We’ll reach you by phone or email within [X] working days to confirm shipping, payment and delivery time.</p>
+<button type="button" class="btn" onClick="{{ reset }}" style="min-height: 48px; padding: 0 22px; border: 0; background: #F7EFE2; color: #120A0E; font: inherit; font-weight: 700; cursor: pointer">回到作品 Back to the works</button>
+</div>
+</sc-if>
+
+</div>
+</div>
+</section>
+
+<!-- RETURNS -->
+<section id="returns" style="padding: 88px 0 96px; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; display: flex; flex-direction: column; align-items: flex-start; font-weight: 700">
+<span style="background: #C5FF55; color: #120A0E; font-size: clamp(32px, 4vw, 56px); line-height: 1.09; padding: 12px 28px 12px clamp(16px, 4vw, 48px); text-transform: uppercase">Returns &amp; refunds</span>
+<span style="background: #120A0E; color: #F7EFE2; font-family: 'Chiron GoRound TC', Arial, sans-serif; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.09; padding: 12px 28px; margin-left: clamp(40px, 6vw, 96px)">退換貨規則</span>
+</h2>
+<div style="width: 100%; max-width: 1344px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<p style="margin: 0; font-size: 18px; line-height: 26px; max-width: 820px">依中華民國《消費者保護法》第19條及相關規定辦理。<br>We follow Article 19 of Taiwan’s Consumer Protection Act and related rules.</p>
+
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 24px">
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #DCB8FF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">1</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">七天猶豫期 · 7-day cooling-off</h3>
+<p style="margin: 0">收到作品後七天內（含例假日），您可以不附理由、不負擔任何費用申請退貨。猶豫期不是試用期，請妥善保管作品。</p>
+<p style="margin: 0">You can return a work within 7 days of receiving it (weekends and holidays included), with no reason needed and at no cost to you. This is a cooling-off period, not a trial period, so please take good care of the work.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #AFE6ED; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">2</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">如何申請 · How to return</h3>
+<p style="margin: 0">請在七天內以 Email 或電話告訴我們訂單姓名與作品名稱（退貨原因可不填）。收到通知後，我們會安排取件。</p>
+<p style="margin: 0">Within the 7 days, email or call us with the name on the order and the work’s title (a reason is optional). Once we hear from you, we’ll arrange collection.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #F3BB06; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">3</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">作品狀態 · Condition</h3>
+<p style="margin: 0">請連同畫框、包裝材料與作品保證書一併退回。為檢查作品而拆封不影響退貨權利；若作品有超出檢查所需的使用或損壞，我們會依損壞程度與您協商修復費用。</p>
+<p style="margin: 0">Please send the work back with its frame, packing materials and certificate of authenticity. Unpacking it to look it over doesn’t affect your right to return. If the work has been used or damaged beyond inspection, we’ll agree a repair cost with you based on the damage.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #C5FF55; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">4</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">退貨運費 · Return shipping</h3>
+<p style="margin: 0">在七天猶豫期內退貨，取件與運送費用由潛地工作室負擔。</p>
+<p style="margin: 0">For returns within the 7-day period, Dachshund Studio pays for collection and return shipping.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #DCB8FF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">5</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">退款時間 · Refunds</h3>
+<p style="margin: 0">收到退回作品後 15 天內，我們會以原付款方式全額退款。</p>
+<p style="margin: 0">We refund the full amount to your original payment method within 15 days of receiving the returned work.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #AFE6ED; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">6</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">運送受損 · Damaged on arrival</h3>
+<p style="margin: 0">若作品送達時有損壞，請保留外箱與包裝並拍照，盡快與我們聯繫。原創作品僅此一件，無法換貨，我們會提供修復或全額退款。</p>
+<p style="margin: 0">If a work arrives damaged, keep the box and packing, take photos and contact us as soon as you can. Originals are one of a kind and can’t be swapped, so we’ll offer a repair or a full refund.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #FFFFFF; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #F3BB06; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">7</span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">不適用情形 · Exceptions</h3>
+<p style="margin: 0">依《通訊交易解除權合理例外情事適用準則》，依您要求客製或委託創作的作品不適用七天猶豫期；我們會在接受委託前事先告知。</p>
+<p style="margin: 0">Under Taiwan’s rules on reasonable exceptions for distance sales, works commissioned or customised at your request aren’t covered by the 7-day period. We’ll tell you before we accept a commission.</p>
+</div>
+</li>
+<li style="display: flex; gap: 20px; background: #120A0E; color: #F7EFE2; padding: 28px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; background: #FF5B23"></span>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<h3 style="margin: 0; font-weight: 700; font-size: 20px; line-height: 26px">聯絡我們 · Contact us</h3>
+<p style="margin: 0">Email：[EMAIL]<br>電話 Phone：[PHONE]<br>服務時間 Hours：[HOURS]</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #120A0E; color: #F7EFE2; padding: 56px clamp(16px, 4vw, 48px) 40px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Chiron GoRound TC', Arial, sans-serif; font-weight: 700; font-size: 28px; line-height: 34px">潛地工作室有限公司</span>
+<span style="font-weight: 700; font-size: 22px; line-height: 28px">Dachshund Studio Limited</span>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: auto auto; gap: 8px 24px; align-content: start">
+<dt style="font-weight: 700">統一編號 VAT ID</dt><dd style="margin: 0">62108218</dd>
+<dt style="font-weight: 700">Email</dt><dd style="margin: 0">[EMAIL]</dd>
+<dt style="font-weight: 700">電話 Phone</dt><dd style="margin: 0">[PHONE]</dd>
+<dt style="font-weight: 700">地址 Address</dt><dd style="margin: 0">[ADDRESS]</dd>
+</dl>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 20px">
+<span>© 2026 潛地工作室有限公司 Dachshund Studio Limited</span>
+<span><a href="#returns" style="color: #C5FF55">退換貨規則 Returns &amp; refunds</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4600}}'>
+var WORKS = [
+  { id: 'villa', artist: 'Berk L', titleZh: '溫暖的夢', titleEn: 'Warm Dream', metaZh: '202ˊ · 水彩', metaEn: 'Watercolour', size: '30 × 20 cm', price: 2200, img: './assets/660d4f27c9556cc9edf8b0db24688f7a.jpeg', ground: '#DCB8FF' },
+  { id: 'home', artist: 'Berk L', titleZh: '老家', titleEn: 'Old Home', metaZh: '2026 · 水彩', metaEn: 'Watercolour', size: '30 × 25 × 1.5 cm', price: 1200, img: './assets/fa7c12dbc01389359e9f8802e7320f76.jpg', ground: '#AFE6ED' },
+  { id: 'dog', artist: 'Berk L', titleZh: '一隻狗的午後', titleEn: 'A Dog’s Afternoon', metaZh: '2026 · 水彩', metaEn: 'Watercolour', size: '15 × 15 × 1.5 cm', price: 800, img: './assets/df2b73dcec5f0b71d12d325907f3dd96.jpg', ground: '#F3BB06' },
+  { id: 'puddle', artist: '阿庭 A-Ting', titleZh: '在雨中跳水坑的犬獸', titleEn: 'Beast Jumping in Puddles in the Rain', metaZh: '', metaEn: '', size: '58 × 88 cm', price: 16000, img: './assets/ffd77bfe078c65ab3887429e2cec5d01.jpg', ground: '#C5FF55' },
+  { id: 'eggs', artist: '阿庭 A-Ting', titleZh: '雙卵獸', titleEn: 'Twin Egg Beasts', metaZh: '', metaEn: '', size: '40 × 59 cm', price: 11000, img: './assets/60041c6c298c6656956125532bc230e9.jpg', ground: '#3A39FF' }
+];
+var REQUIRED = ['name', 'phone', 'email', 'zip', 'city', 'address'];
+var EMPTY_FORM = { name: '', phone: '', email: '', method: 'delivery', zip: '', city: '', address: '', vat: '', time: '', note: '' };
+function money(n) { return 'NT$ ' + n.toLocaleString('en-US'); }
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { cart: [], step: 'cart', form: Object.assign({}, EMPTY_FORM), error: false, ordered: [] };
+  }
+  add(id) {
+    if (this.state.cart.indexOf(id) === -1) this.setState({ cart: this.state.cart.concat([id]), step: this.state.step === 'done' ? 'cart' : this.state.step });
+  }
+  remove(id) {
+    var cart = this.state.cart.filter(function (x) { return x !== id; });
+    this.setState({ cart: cart, step: cart.length ? this.state.step : 'cart' });
+  }
+  setField(key, value) {
+    var form = Object.assign({}, this.state.form);
+    form[key] = value;
+    this.setState({ form: form });
+  }
+  submit(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    var f = this.state.form;
+    var needed = f.method === 'pickup' ? ['name', 'phone', 'email'] : REQUIRED;
+    var missing = needed.some(function (k) { return !String(f[k] || '').trim(); });
+    if (missing || !this.state.cart.length) { this.setState({ error: true }); return; }
+    var cart = this.state.cart;
+    var ordered = WORKS.filter(function (w) { return cart.indexOf(w.id) !== -1; });
+    this.setState({ step: 'done', error: false, ordered: ordered, cart: [], form: Object.assign({}, EMPTY_FORM) });
+  }
+  renderVals() {
+    var self = this;
+    var s = this.state;
+    var cart = s.cart;
+    var works = WORKS.map(function (w) {
+      var inCart = cart.indexOf(w.id) !== -1;
+      return Object.assign({}, w, {
+        priceText: money(w.price),
+        hasMeta: !!w.metaZh,
+        alt: w.artist + '《' + w.titleZh + '》' + w.titleEn,
+        removeLabel: '從購物車移除 Remove from cart: ' + w.titleZh + ' ' + w.titleEn,
+        inCart: inCart,
+        notInCart: !inCart,
+        add: function () { self.add(w.id); },
+        remove: function () { self.remove(w.id); }
+      });
+    });
+    var cartItems = works.filter(function (w) { return w.inCart; });
+    var subtotal = cartItems.reduce(function (t, w) { return t + w.price; }, 0);
+    var on = {};
+    Object.keys(EMPTY_FORM).forEach(function (k) { on[k] = function (e) { self.setField(k, e.target.value); }; });
+    var hasItems = cartItems.length > 0;
+    return {
+      works: works,
+      cartItems: cartItems,
+      cartCount: cartItems.length,
+      cartEmpty: !hasItems && s.step !== 'done',
+      cartHasItems: hasItems,
+      subtotalText: money(subtotal),
+      showCheckoutBtn: hasItems && s.step === 'cart',
+      showFormHint: s.step === 'cart',
+      showForm: hasItems && s.step === 'form',
+      showDone: s.step === 'done',
+      showError: s.error,
+      form: s.form,
+      on: on,
+      orderedZh: s.ordered.map(function (w) { return '《' + w.titleZh + '》'; }).join('、'),
+      orderedEn: s.ordered.map(function (w) { return w.titleEn; }).join(', '),
+      goCheckout: function () { self.setState({ step: 'form', error: false }); },
+      submit: function (e) { self.submit(e); },
+      reset: function () { self.setState({ step: 'cart', ordered: [] }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
